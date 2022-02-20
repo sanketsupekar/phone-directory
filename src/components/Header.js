@@ -1,6 +1,7 @@
 import React from "react";
 import headerbg from "../image/header_img.jpg";
 import appTitle from "./LocalData";
+import SocialLink from "./SocialLink";
 
 export default function Header() {
   return (
@@ -15,7 +16,7 @@ export default function Header() {
           backgroundColor: "black",
         }}
       >
-        <div className="w-50 m-auto my-5 py-5">
+        <div className=" header-wrapper w-50 m-auto my-5 py-5">
           <div className="card-header">MERN Stack Application</div>
           <div className="card-body">
             <h1 className="card-title fw-bolder">{appTitle}</h1>
@@ -28,10 +29,7 @@ export default function Header() {
               </span>{" "}
               Database. The application has a pleasant user interface and is easy to use.
             </p>
-     
-            <a href="#" className="btn btn-light">
-              Explore
-            </a>
+            <SocialLink></SocialLink>
           </div>
         </div>
       </div>

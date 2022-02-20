@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import NavBar from "./NavBar";
 // const testUser = {
 //      firstName: "Sanket",
 //      lastName: "Supekar",
@@ -78,11 +79,13 @@ export default function ContactCreate(props) {
     console.log("Data Fetch");
   }
   useEffect(() => {
-    if (isEdit) fetchingData() 
-  }, []);// eslint-disable-line
+    if (isEdit) fetchingData();
+  }, []); // eslint-disable-line
 
   return (
     <>
+      <NavBar></NavBar>
+      <div className="mt-5">.</div>
       {error ? (
         <div
           className="alert alert-danger d-flex align-items-center"
@@ -205,10 +208,7 @@ export default function ContactCreate(props) {
             </div>
           </div>
 
-          <button
-            type="submit"
-            className="btn btn-dark w-25 align-self-center"
-          >
+          <button type="submit" className="btn btn-dark align-self-center">
             Submit
           </button>
           {isLoading ? (

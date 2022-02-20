@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ContactCard from "./ContactCard";
 import Header from "./Header";
 import { Link, useNavigate } from "react-router-dom";
+import NavBar from "./NavBar";
 
 export default function ContactSearch() {
   const [inputText, setInputText] = useState("");
@@ -57,32 +58,25 @@ export default function ContactSearch() {
 
   return (
     <>
-      <Header></Header>
+      <NavBar></NavBar>
       <div className="input-group border w-50 p-5 mt-5 m-auto shadow-sm p-3 mb-5 bg-body rounded">
-        <form method="GET " className="w-100">
-          <div className="d-flex flex-wrap justify-content-around w-100">
+        <form className="w-100" onSubmit={handleOnSearch}>
+          <div className=" search-box-wrapper d-flex flex-wrap justify-content-around w-100">
             <input
               type="search"
               id="searchText"
               value={inputText}
               onChange={handleSearchText}
               className=" form-control w-50"
-              placeholder="Please enter your name"
+              placeholder="Search Name"
             />
 
             <button
-              type="button"
+              type="submit"
               className="btn btn-dark rounded"
-              onClick={handleOnSearch}
+              // onClick={handleOnSearch}
             >
               Search
-            </button>
-            <button
-              type="button"
-              className="btn btn-dark "
-              onClick={() => navigate("/contact")}
-            >
-              Add
             </button>
           </div>
         </form>

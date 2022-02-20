@@ -1,24 +1,21 @@
 import React from "react";
 import "./App.css";
 import ContactCreate from "./components/ContactCreate";
-import ContactSearch from "./components/ContactSearch";
-import Header from "./components/Header";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import Home from "./components/Home";
 
 function App() {
   return (
     <>
-    <NavBar></NavBar>
-    
-    <BrowserRouter>
-      <Routes>
-        <Route path="search" element={<ContactSearch />} />
-        <Route path="contact" element={<ContactCreate />} />
-        <Route path="contact/:contactId" element={<ContactCreate />} />
-        <Route path="*" element={<Navigate replace to="search" />} />
-      </Routes>
-    </BrowserRouter>
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path="home" element={<Home />}></Route>
+          <Route path="contact" element={<ContactCreate />} />
+          <Route path="contact/:contactId" element={<ContactCreate />} />
+          <Route path="*" element={<Navigate replace to="home" />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

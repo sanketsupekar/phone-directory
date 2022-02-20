@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../App";
 export default function (props) {
   const neavigate = useNavigate();
   return (
-      <div className=" p-2 border shadow p-3 mb-5 bg-body rounded" style={ {width : "25rem"}}>
+      <div className=" p-2 border shadow mx-3 p-3 mb-5 bg-body rounded" style={ {width : "25rem"}}>
         <div className="d-flex justify-content-around flex-column">
           <div className="text-center">
             <img // eslint-disable-line

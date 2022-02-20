@@ -1,0 +1,39 @@
+a {
+  transition: transform 0.3s;
+}
+.socialLinks a:hover {
+  transform: scale(1.3);
+}
+
+.navbar a:hover {
+  transform: scale(1.1);
+}
+
+button {
+  transition: transform 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+/* #################### Media Querey ######################## */
+@media (max-width: 576px) {
+  .header-wrapper {
+    width: 100% !important;
+  }
+  .input-group {
+    width: 100% !important;
+    padding: 5% !important;
+  }
+  .search-box-wrapper {
+    flex-direction: column !important;
+   
+  }
+  .search-box-wrapper .input-group{
+      margin: 5% !important;
+  }
+  .search-box-wrapper input{
+    width: 100% !important;
+    margin: 2rem 0 !important;
+  }
+}
