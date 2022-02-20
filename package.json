@@ -12,6 +12,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "body-parser": "^1.19.2",
     "express": "^4.17.3",
     "mime": "^3.0.0",
     "mongoose": "^6.2.2",
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "start": "node index",
-    "build": "react-scripts build",
+    "build": "react-scripts  build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

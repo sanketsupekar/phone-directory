@@ -19,23 +19,25 @@ async function searchContactsById(req) {
   return contactData;
 }
 
-var qs = require("querystring");
 
 async function createContact(request) {
-  if (request.method == "POST") {
-    var body = "";
-    request.on("data", function (data) {
-      body += data;
-      console.log(body);
-      if (body.length > 1e6) {
-
-        request.connection.destroy();
-      }
-    });
-    request.on("end", function () {
-      var POST = qs.parse(body);
-    });
-  }
+    const data = request.body;
+    const createData = await Contact.insertMany([data]);
+    return createData;
 }
 
-module.exports = { searchContacts, searchContactsById, createContact };
+async function updateContact(request) {
+  const data = request.body;
+  //console.log(data._id);
+  const updateData = await Contact.updateOne({"_id": data._id},{$set: data}).catch(e => console.log("errrr",e));
+  return updateData;
+}
+
+async function deleteContact(request) {
+  const data = request.body;
+  const deleteData = await Contact.deleteOne(data);
+  return deleteData;
+}
+
+
+module.exports = { searchContacts, searchContactsById, createContact, updateContact,deleteContact};

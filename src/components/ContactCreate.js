@@ -107,6 +107,18 @@ export default function ContactCreate(props) {
           onSubmit={handleOnSubmit}
         >
           <h2 className="mb-5">Contact Information</h2>
+          {isLoading ? (
+            <div className="d-flex align-items-center mb-5 m-auto ">
+              <strong>Loading...</strong>
+              <div
+                className="spinner-border ms-auto"
+                role="status"
+                aria-hidden="true"
+              ></div>
+            </div>
+          ) : (
+            <div></div>
+          )}
           <div className="d-flex flex-row mb-4">
             <div className="form-outline flex-fill mb-0">
               <label className="form-label" htmlFor="firstName">
@@ -205,24 +217,13 @@ export default function ContactCreate(props) {
                 maxLength={100}
                 required
               />
+              <p className="fw-lighter fst-italic fs-8">Example - https://randomuser.me/api/portraits/men/70.jpg</p>
             </div>
           </div>
 
           <button type="submit" className="btn btn-dark align-self-center">
             Submit
           </button>
-          {isLoading ? (
-            <div className="d-flex align-items-center mt-5 m-auto ">
-              <strong>Uploading...</strong>
-              <div
-                className="spinner-border ms-auto"
-                role="status"
-                aria-hidden="true"
-              ></div>
-            </div>
-          ) : (
-            <div></div>
-          )}
         </form>
       </div>
     </>
