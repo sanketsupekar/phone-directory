@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ContactCard from "./ContactCard";
-import { Link } from "react-router-dom";
+import Header from "./Header";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function ContactSearch() {
   const [inputText, setInputText] = useState("");
@@ -9,6 +10,7 @@ export default function ContactSearch() {
 
   const searchUrl = "api/contacts?search=";
   const deleteUrl = "api/contact";
+  const navigate = useNavigate();
 
   async function fetchingData() {
     setLoading(true);
@@ -23,7 +25,7 @@ export default function ContactSearch() {
     setLoading(false);
     setInputText("");
   }
-  
+
   async function deletingData(_id) {
     try {
       setLoading(true);
@@ -55,58 +57,66 @@ export default function ContactSearch() {
 
   return (
     <>
-      <div className="input-group w-50 border p-5 mt-5 m-auto shadow-sm p-3 mb-5 bg-body rounded">
-        <div className="input-group  pb-4 d-flex justify-content-center">
-          <h1> Phone Directory</h1>
-        </div>
-        <form method="GET" className="input-group">
-          <div className="input-group">
+      <Header></Header>
+      <div className="input-group border w-50 p-5 mt-5 m-auto shadow-sm p-3 mb-5 bg-body rounded">
+        <form method="GET " className="w-100">
+          <div className="d-flex flex-wrap justify-content-around w-100">
             <input
               type="search"
               id="searchText"
               value={inputText}
               onChange={handleSearchText}
-              className="form-control"
+              className=" form-control w-50"
               placeholder="Please enter your name"
             />
+
             <button
-              type="submit"
-              className="btn btn-primary mx-3"
+              type="button"
+              className="btn btn-dark rounded"
               onClick={handleOnSearch}
             >
               Search
             </button>
-            <Link to="/contact">
-              <button type="button" className="btn btn-primary mx-3">
-                Add
-              </button>
-            </Link>
+            <button
+              type="button"
+              className="btn btn-dark "
+              onClick={() => navigate("/contact")}
+            >
+              Add
+            </button>
           </div>
         </form>
       </div>
-      {userData.length === 0 && !isLoading ? (
-        <div className="d-flex align-items-center text-center m-auto w-25">
-          <p className="w-100">No Data Found..!</p>
-        </div>
-      ) : (
-        <div></div>
-      )}
+      <div className="my-5">
+        {userData.length === 0 && !isLoading ? (
+          <div className="d-flex align-items-center text-center m-auto w-25">
+            <p className="w-100">No Data Found..!</p>
+          </div>
+        ) : (
+          <div></div>
+        )}
 
-      {isLoading ? (
-        <div className="d-flex align-items-center m-auto w-25">
-          <strong>Loading...</strong>
-          <div
-            className="spinner-border ms-auto"
-            role="status"
-            aria-hidden="true"
-          ></div>
-        </div>
-      ) : (
-        <div></div>
-      )}
-      {userData.map((user, key) => {
-        return <ContactCard key={key} {...user} deletingData={deletingData} />;
-      })}
+        {isLoading ? (
+          <div className="d-flex align-items-center m-auto w-25">
+            <strong>Loading...</strong>
+            <div
+              className="spinner-border ms-auto"
+              role="status"
+              aria-hidden="true"
+            ></div>
+          </div>
+        ) : (
+          <div></div>
+        )}
+      </div>
+
+      <div className="d-flex flex-wrap justify-content-around ">
+        {userData.map((user, key) => {
+          return (
+            <ContactCard key={key} {...user} deletingData={deletingData} />
+          );
+        })}
+      </div>
     </>
   );
 }

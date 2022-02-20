@@ -207,7 +207,7 @@ export default function ContactCreate(props) {
 
           <button
             type="submit"
-            className="btn btn-primary w-25 align-self-center"
+            className="btn btn-dark w-25 align-self-center"
           >
             Submit
           </button>
