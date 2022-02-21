@@ -3,6 +3,7 @@ import ContactCard from "./ContactCard";
 import Header from "./Header";
 import { Link, useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 export default function ContactSearch() {
   const [inputText, setInputText] = useState("");
@@ -111,6 +112,7 @@ export default function ContactSearch() {
           );
         })}
       </div>
+      <Footer></Footer>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import appTitle from "./LocalData";
-import logo from "../logo.svg";
+import logo from "../logo.png";
 import { Link } from "react-router-dom";
 import '../App';
 export default function NavBar() {

@@ -1,6 +1,6 @@
 {
   "name": "ract_app",
-  "proxy": "https://phonedirectorymernstack.herokuapp.com/",
+  "proxy": "https://phone-directory-application.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 // const testUser = {
 //      firstName: "Sanket",
 //      lastName: "Supekar",
@@ -226,6 +227,7 @@ export default function ContactCreate(props) {
           </button>
         </form>
       </div>
+      <Footer></Footer>
     </>
   );
 }

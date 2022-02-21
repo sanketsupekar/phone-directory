@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <div
-        className="card text-center text-light font-monospace shadow p-3 "
+        className="card text-center text-light shadow p-3 "
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(${headerbg})`,
           backgroundSize: "cover",
@@ -21,13 +21,11 @@ export default function Header() {
           <div className="card-body">
             <h1 className="card-title fw-bolder">{appTitle}</h1>
             <p className="card-text fw-lighter ">
-              This web-based application was developed using{" "}
               <span className="fw-bolder ">
-                {" "}
-                HTML, CSS, JAVACSRIPT, REACT, BOOTSTRAP, NODE.JS, EXPRESS.JS And
-                MONGO-DB{" "}
-              </span>{" "}
-              Database. The application has a pleasant user interface and is easy to use.
+                This is a simple phone directory web application which supports
+                : Create, Update, Delete And Search Contact in phone Directory
+                with responsive user interface.
+              </span>
             </p>
             <SocialLink></SocialLink>
           </div>
