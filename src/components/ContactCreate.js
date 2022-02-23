@@ -218,8 +218,11 @@ export default function ContactCreate(props) {
                 maxLength={100}
                 required
               />
-              <p className="fw-lighter fst-italic fs-8">Example - https://randomuser.me/api/portraits/men/70.jpg</p>
+             
             </div>
+          </div>
+          <div style={{ inlineSize: "auto" , overflowWrap: "break-word"}}>
+          <p className="fw-lighter fst-italic fs-9">Example - https://randomuser.me/api/portraits/men/70.jpg</p>
           </div>
 
           <button type="submit" className="btn btn-dark align-self-center">
@@ -227,7 +230,7 @@ export default function ContactCreate(props) {
           </button>
         </form>
       </div>
-      <Footer></Footer>
+
     </>
   );
 }

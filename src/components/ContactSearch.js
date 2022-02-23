@@ -112,7 +112,6 @@ export default function ContactSearch() {
           );
         })}
       </div>
-      <Footer></Footer>
     </>
   );
 }
