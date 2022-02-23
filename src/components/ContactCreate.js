@@ -134,8 +134,8 @@ export default function ContactCreate(props) {
                   setFormData({ ...formData, [e.target.id]: e.target.value })
                 }
                 placeholder={"Enter First Name"}
-                minLength={2}
-                maxLength={100}
+                minLength={1}
+                maxLength={10}
                 required
               />
             </div>
@@ -154,8 +154,8 @@ export default function ContactCreate(props) {
                   setFormData({ ...formData, [e.target.id]: e.target.value })
                 }
                 placeholder={"Enter Last Name"}
-                minLength={2}
-                maxLength={100}
+                minLength={1}
+                maxLength={10}
                 required
               />
             </div>
@@ -175,7 +175,7 @@ export default function ContactCreate(props) {
                 }
                 placeholder={"Enter Email Address"}
                 minLength={2}
-                maxLength={100}
+                maxLength={25}
                 required
               />
             </div>
@@ -194,8 +194,8 @@ export default function ContactCreate(props) {
                   setFormData({ ...formData, [e.target.id]: e.target.value })
                 }
                 placeholder={"Enter  Phone Number"}
-                minLength={2}
-                maxLength={100}
+                minLength={10}
+                maxLength={10}
                 required
               />
             </div>
@@ -215,7 +215,7 @@ export default function ContactCreate(props) {
                 }
                 placeholder={"Enter Picture Url"}
                 minLength={2}
-                maxLength={100}
+                maxLength={50}
                 required
               />
              

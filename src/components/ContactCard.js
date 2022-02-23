@@ -6,9 +6,9 @@ export default function (props) {
   return (
       <div className=" p-2 border shadow mx-3 p-3 mb-5 bg-body rounded" style={ {width : "25rem"}}>
         <div className="d-flex justify-content-around flex-column">
-          <div className="text-center">
+          <div className="text-center ">
             <img // eslint-disable-line
-              className="rounded-circle border border-dark"
+              className="rounded-circle border border-dark border-3 " style={{width: "8rem", height: "8rem"}} 
               alt="Profile Picture"
               src={props.pictureUrl}
             />
@@ -27,9 +27,9 @@ export default function (props) {
               <label className="fw-bold  mx-2"> Last Name :</label>
               <label>{props.lastName}</label>
             </div>
-            <div className="d-flex">
+            <div className="d-flex flex-wrap " >
               <label className="fw-bold  mx-2"> Email Address :</label>
-              <label>{props.email}</label>
+              <label >{props.email}</label>
             </div>
           </div>  
 </div>
