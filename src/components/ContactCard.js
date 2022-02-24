@@ -20,12 +20,12 @@ export default function (props) {
               <label>{props.firstName}</label>
             </div>
             <div className="d-flex">
-              <label className="fw-bold  mx-2"> Phone Number :</label>
-              <label>{props.phone}</label>
-            </div>
-            <div className="d-flex">
               <label className="fw-bold  mx-2"> Last Name :</label>
               <label>{props.lastName}</label>
+            </div>
+            <div className="d-flex">
+              <label className="fw-bold  mx-2"> Phone Number :</label>
+              <label>{props.phone}</label>
             </div>
             <div className="d-flex flex-wrap " >
               <label className="fw-bold  mx-2"> Email Address :</label>
