@@ -215,7 +215,7 @@ export default function ContactCreate(props) {
                 }
                 placeholder={"Enter Picture Url"}
                 minLength={2}
-                maxLength={50}
+                maxLength={150}
                 required
               />
              
