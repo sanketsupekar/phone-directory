@@ -1,3 +1,22 @@
+## Project Working
+### Project :  [Link](https://phone-directory-application.herokuapp.com/home) 
+
+### Project Overview
+This is a simple phone book web application which supports:
+- New contact creation
+- Existing contact deletion
+- Updating any existing contact
+- Search Contacts
+- View All Contacts
+- Responsive User Interface
+#### Technologies Used
+- Front-End: HTML, CSS, JavaScript, React.js, BootStrap
+- Backend: Node.js, Express.js
+- Database: MongoDB
+
+https://user-images.githubusercontent.com/72608053/155841049-2eb17b05-a2d6-4beb-aecf-8942189bf12b.mp4
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
