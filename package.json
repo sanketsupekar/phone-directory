@@ -1,6 +1,6 @@
 {
   "name": "ract_app",
-  "proxy": "https://phone-directory-application.herokuapp.com/",
+  "proxy": "https://localhost:3000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node index",
+    "start": "react-scripts start",
     "build": "react-scripts  build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -17,5 +17,5 @@ app.use("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 app.listen(port, () => {
-  console.log("Server is ready to listening....");
+  console.log("Server is ready to listening....",port);
 });

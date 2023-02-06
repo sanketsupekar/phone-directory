@@ -175,7 +175,7 @@ export default function ContactCreate(props) {
                 }
                 placeholder={"Enter Email Address"}
                 minLength={2}
-                maxLength={25}
+                maxLength={30}
                 required
               />
             </div>
