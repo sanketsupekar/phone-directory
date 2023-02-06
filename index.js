@@ -3,7 +3,7 @@ const connectToDb = require("./controllers/mongoose.controller");
 const apiRouter = require("./routes");
 const path = require("path");
 const Contact = require("./model/contact.model");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
