@@ -1,0 +1,12 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Mern Stack Project",
+  "main": "/backEnd/index.js",
+  "scripts": {
+    "start": "node backEnd/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -9,7 +9,6 @@ const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}));
-
 connectToDb();
 app.use("/api", apiRouter);
 app.use(express.static(path.resolve(__dirname, "../frontEnd/build")));
